@@ -1,17 +1,23 @@
+shared: &shared
+  cobrand_session_token_url: "/authenticate/coblogin"
+
 development:
-  base_url: https://rest.developer.yodlee.com/services/srest/restserver/v1.0
-  username: sbCobNate Synaptian
-  password: 118414a5-9525-4ad1-bce1-d5438ec30ec3
-  resgister_users: false
+  <<: *shared
+  base_url: "https://rest.developer.yodlee.com/services/srest/restserver/v1.0"
+  username: "sbCobNate Synaptian"
+  password: "118414a5-9525-4ad1-bce1-d5438ec30ec3"
+  register_users: "false"
 
 test:
-  base_url: https://rest.developer.yodlee.com/services/srest/restserver/v1.0
-  username: sbCobNate Synaptian
-  password: 118414a5-9525-4ad1-bce1-d5438ec30ec3
-  resgister_users: false
+  <<: *shared
+  base_url: "https://rest.developer.yodlee.com/services/srest/restserver/v1.0"
+  username: "sbCobNate Synaptian"
+  password: "118414a5-9525-4ad1-bce1-d5438ec30ec3"
+  register_users: "false"
 
 production:
+  <<: *shared
   base_url:
   username:
   password:
-  resgister_users: true
+  register_users: "true"
